@@ -14,7 +14,7 @@ export class RandomMealComponent {
   ngOnInit():void{
     this.mealService.getRandomMeal().subscribe((data)=>{
       this.randomMeal = data;
-      console.log(this.randomMeal);
+      //console.log(this.randomMeal);
     })
   }
 

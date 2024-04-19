@@ -1,1 +1,17 @@
-<p>meal works!</p>
+
+<div class="row">
+    <div class="col-12">
+        <h1 style="text-align: center; padding-top: 60px; padding-bottom: 50px;">{{ mealTitle }}</h1>
+    </div>
+    <div class="col-2"></div>
+    <div class="col-3">
+        <img [src]="mealImg" (error)="mealImg = 'assets/images/logo2.png'" class="rounded border border-4" style="width: 80%;">
+    </div>
+    <div class="col-7" style="height: 80vh; overflow-y: auto;">
+        <div *ngFor="let step of steps; let index = index" style="padding-top: 20px;">
+            <h2 style="font-weight: bolder;">Step {{ index+1 }}</h2>
+            <br><br>
+            <p style="font-size: larger;">{{ step }}</p>
+        </div>
+    </div>
+</div>
