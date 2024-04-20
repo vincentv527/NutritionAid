@@ -1,1 +1,5 @@
-<p>find-meal works!</p>
+<mat-grid-list cols="5" rowHeight="fit" *ngIf="ciaChoices">
+    <mat-grid-tile *ngFor="let choice of ciaChoices">{{ choice }}</mat-grid-tile>
+</mat-grid-list>
+
+<app-meal *ngIf="choosenMeal" [meal]="choosenMeal"></app-meal>

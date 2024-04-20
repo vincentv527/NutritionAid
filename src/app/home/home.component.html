@@ -5,10 +5,10 @@
 </h1>
 
 <div style="display: flex; justify-content: center;">
-    <button mat-fab extended color="primary" style="margin: 1%;">
+    <button mat-fab extended color="primary" [routerLink]="['../randomMeal']" style="margin: 1%;">
         Discover a Random Meal
     </button>
-    <button mat-fab extended color="accent" style="margin: 1%;">
+    <button mat-fab extended color="accent" [routerLink]="['../findMeal']" style="margin: 1%;">
         Search for a Meal
     </button>
 </div>

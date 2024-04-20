@@ -12,7 +12,9 @@ import { MealserviceComponent } from './services/mealservice/mealservice.compone
 import { RouterModule, Routes } from '@angular/router';
 import { MealComponent } from './meal/meal.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import {MatButtonModule} from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -21,8 +23,8 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'testMeal',
-    component: MealComponent
+    path: 'findMeal',
+    component: FindMealComponent
   },
   {
     path: 'randomMeal',
@@ -44,6 +46,8 @@ const routes: Routes = [
     NgbModule,
     HttpClientModule,
     MatButtonModule,
+    MatGridListModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes),
   ],
   providers: [MealserviceComponent, provideAnimationsAsync()],
