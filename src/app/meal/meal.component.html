@@ -6,6 +6,26 @@
     <div class="col-2"></div>
     <div class="col-3">
         <img [src]="mealImg" (error)="mealImg = 'assets/images/logo2.png'" class="rounded border border-4" style="width: 80%;">
+        <br>
+        <div class="row" style="padding-top: 30px; height:550px; overflow-y: auto;">
+            <div class="col-6" style="font-size: 25px; font-weight: bold;">
+                Ingredients
+                <br>
+                <br>
+                <div *ngFor="let ing of ingredients; let index = index" [ngStyle]="{'background-color':index % 2 == 0 ? 'lightgrey' : 'white'}" style="padding-top: 10px; padding-bottom: 10px; font-size: 20px; font-weight: 200;">
+                    {{ ing }}
+                </div>
+            </div>
+            <div class="col-6" style="font-size: 25px; font-weight: bold;">
+                Amount
+                <br>
+                <br>
+                <div *ngFor="let amt of ingredientsAmts; let index = index" [ngStyle]="{'background-color':index % 2 == 0 ? 'lightgrey' : 'white'}" style="padding-top: 10px; padding-bottom: 10px;  font-size: 20px; font-weight: 200;">
+                    {{ amt }}
+                </div>
+            </div>
+        </div>
+        
     </div>
     <div class="col-7" style="height: 80vh; overflow-y: auto;">
         <div *ngFor="let step of steps; let index = index" style="padding-top: 20px;">

@@ -86,20 +86,24 @@ export class MealComponent implements OnInit {
 
   getIngredients(){
     for(let i = 1; i <=20; i++){
-      if(this.meal["meals"]["strIngredient"+i] != "")
+      if(this.meal.meals[0]["strIngredient"+i] != "" && this.meal.meals[0]["strIngredient"+i] != " "){
         //console.log(this.test["meal"]["strIngredient"+i]);
         this.ingredients.push(this.meal.meals[0]["strIngredient"+i]);
+      }
+        
     }
     //console.log(this.ingredients);
   }
 
   getIngredientAmts(){
     for(let i = 1; i <=20; i++){
-      if(this.meal["meals"]["strMeasure"+i] != " ")
+      if(this.meal.meals[0]["strMeasure"+i] != " " && this.meal.meals[0]["strMeasure"+i] != ""){
         //console.log(this.test["meal"]["strIngredient"+i]);
         this.ingredientsAmts.push(this.meal.meals[0]["strMeasure"+i]);
+      }
+        
     }
-    //console.log(this.ingredientsAmts);
+    console.log(this.ingredientsAmts);
   }
 
   getSteps(){
@@ -115,4 +119,3 @@ export class MealComponent implements OnInit {
   }
 
 }
-"Preheat the oven to 180C/350F/Gas 4.\r\n\r\nFor the beef stew, heat the oil and butter in an ovenproof casserole and fry the beef until browned on all sides.\r\n\r\nSprinkle over the flour and cook for a further 2-3 minutes.\r\n\r\nAdd the garlic and all the vegetables and fry for 1-2 minutes.\r\n\r\nStir in the wine, stock and herbs, then add the Worcestershire sauce and balsamic vinegar, to taste. Season with salt and freshly ground black pepper.\r\n\r\nCover with a lid, transfer to the oven and cook for about two hours, or until the meat is tender.\r\n\r\nFor the dumplings, sift the flour, baking powder and salt into a bowl.\r\nAdd the suet and enough water to form a thick dough.\r\n\r\nWith floured hands, roll spoonfuls of the dough into small balls.\r\n\r\nAfter two hours, remove the lid from the stew and place the balls on top of the stew. Cover, return to the oven and cook for a further 20 minutes, or until the dumplings have swollen and are tender. (If you prefer your dumplings with a golden top, leave the lid off when returning to the oven.)\r\n\r\nTo serve, place a spoonful of mashed potato onto each of four serving plates and top with the stew and dumplings. Sprinkle with chopped parsley."
