@@ -15,6 +15,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatRippleModule} from '@angular/material/core';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -47,6 +48,7 @@ const routes: Routes = [
     HttpClientModule,
     MatButtonModule,
     MatGridListModule,
+    MatRippleModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
   ],

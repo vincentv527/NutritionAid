@@ -86,24 +86,24 @@ export class MealComponent implements OnInit {
 
   getIngredients(){
     for(let i = 1; i <=20; i++){
-      if(this.meal.meals[0]["strIngredient"+i] != "" && this.meal.meals[0]["strIngredient"+i] != " "){
+      if(this.meal.meals[0]["strIngredient"+i] != "" && this.meal.meals[0]["strIngredient"+i] != " " && this.meal.meals[0]["strIngredient"+i] != null){
         //console.log(this.test["meal"]["strIngredient"+i]);
         this.ingredients.push(this.meal.meals[0]["strIngredient"+i]);
       }
-        
+      
     }
-    //console.log(this.ingredients);
+    console.log("Ings: " + this.ingredients);
   }
 
   getIngredientAmts(){
     for(let i = 1; i <=20; i++){
-      if(this.meal.meals[0]["strMeasure"+i] != " " && this.meal.meals[0]["strMeasure"+i] != ""){
+      if(this.meal.meals[0]["strMeasure"+i] != " " && this.meal.meals[0]["strMeasure"+i] != "" && this.meal.meals[0]["strMeasure"+i] != null){
         //console.log(this.test["meal"]["strIngredient"+i]);
         this.ingredientsAmts.push(this.meal.meals[0]["strMeasure"+i]);
       }
         
     }
-    console.log(this.ingredientsAmts);
+    console.log("IngAmts: " + this.ingredientsAmts);
   }
 
   getSteps(){
